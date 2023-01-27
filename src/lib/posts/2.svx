@@ -1,6 +1,6 @@
 ---
-title: Post Two
-date: "2022-11-29"
+title: Fredag
+date: "2023-01-20"
 count: 25
 color: cadetblue
 list: [1, 2, 3, 4, "boo"]
@@ -15,73 +15,62 @@ list: [1, 2, 3, 4, "boo"]
 	let number = 45;
 </script>
 
+
+Idag började jag med att sätta in en border runt min bild i min game class. Bordern fick färgen brun från början
+men snart insåg att brun inte passade mitt tema så bytte jag färgen till rosa genom att ändra background-color.
+
 ```ts
-import type { PageLoad } from "./$types";
-
-export const load: PageLoad = async ({fetch}) => {
-	const response = await fetch(`/api/posts`);
-	const posts = await response.json();
-
-	return {
-	posts,
-	};
-};
+.game {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    background-color: #f9e4f1;
+    border-radius: 0% 0%;
 ```
 
-## Good stuff in your markdown
+Efter det fixade jag färgtemat på mina workers så att det fick en rosa bakgrund med 
+en mörkrosa border färg. Jag ändrade det genom att byta background-color och
+border.
 
-Markdown is pretty good but sometimes you just need more.
-
-Sometimes you need a boinger like this:
-
-<Boinger color="{ color }"/>
-
-Not many people have a boinger right in their markdown.
-
-## Markdown in your markdown
-
-Sometimes what you wrote last week is so good that you just *have* to include it again.
-
-I'm not gonna stand in the way of your egomania.
->
-><Section />
-> <Count />
->
->— *Me, May 2019*
-
-Yeah, thats right you can put wigdets in markdown (`.svx` files or otherwise). You can put markdown in widgets too.
-
-<Seriously>
-
-### I wasn't joking
-
+```ts
+ .worker {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(167, 30, 96);
+    background-color: rgb(238, 212, 229);
+    place-items: center;
+    place-content: center;
+    display: flex;
+  }
 ```
-	This is real life
+Sen fixade jag min ros bild så att den blev centrerad och förminskad i cliker cirkeln.
+Jag fixade det genom att ändra background-size från cover till 60% 104% oxh background position till center.
+
+```ts
+.clicker {
+    clip-path: circle();
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    background-image: url("https://th.bing.com/th/id/R.48246a31508b31fabc64e3bdd8c8b17d?rik=6OTssvTK5M3h5A&riu=http%3a%2f%2fwww.lovethispic.com%2fuploaded_images%2f152446-Pink-Rose-With-Glitter.gif&ehk=JPScPlUeI24%2f9gfMdM4hOeY0oI3QIhBnoF0XQ7XNvqk%3d&risl=&pid=ImgRaw&r=0");
+    background-size: 60% 104%;
+    background-position: center;
+    
+  }
 ```
+Jag bytte även bild som ligger i min uppgrade class i background-image till en png som glittrar.
+Efter det kom jag på iden att sätta in en png gif som kom in på skärmen vid klickning
+på blomman. Då kommer det ner blomblad från skärmen. Jag han inte klart med det på dagens lektion
+så jag fortsätter på nästa lektion.
+Jag fortsatte med att skriva på min andra blog.
 
----
-## Hej lisa!    
 
-<Count/>
 
-</Seriously>
 
-Sometimes you need your widgets **inlined** (like this:<Count count="{number}"/>) because why shouldn't you.
-Obviously you have access to values defined in YAML (namespaced under `metadata`) and anything defined in an fenced `js exec` block can be referenced directly.
 
-Normal markdown stuff works too:
-
-| like  | this |
-|-------|------|
-| table | here |
-
-And *this* and **THIS**. And other stuff. You can also use all your favorite Svelte features, like `each` blocks:
-
-<ul>
-{#each list as item}
-  <li>{item}</li>
-{/each}
-</ul>
-
-and all the other good Svelte stuff.
 

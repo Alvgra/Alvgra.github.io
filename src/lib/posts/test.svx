@@ -1,17 +1,85 @@
 ---
-title: Post three
-date: "2022-11-30"
+title: Onsdag
+date: "2022-01-25"
 ---
 
-<h1>Tjena</h1>
+<h1>Vad jag gjorde i Onsdags</h1>
 
 
+Det första jag gjorde var att lägga in musik till min blog, allltså en adio player. Koden tog jag från sveltes hemsida.
+Jag importerade en Adiuplayer och sedan tog jag en musik länk och lade in den i en lista.
+Se koden nedan.
+```js
+<script>
+   import AudioPlayer, { stopAll } from './AudioPlayer.svelte'
 
-# you
+let audioTracks = [
+  'https://sveltejs.github.io/assets/music/strauss.mp3'
+]
+```
 
----
+Efter det skapade jag en ny Adioplayer fil som jag lade under routes.
+Se koden nedan jag lade in
 
-## Whatup
+```js
+<script context="module">
+    const players = new Set()
+  
+    export function stopAll() {
+      players.forEach(p => p.pause())
+    }
+  </script>
+  
+  <script>
+    import { onMount } from 'svelte'
+  
+    export let src
+    
+    let player
+  
+    onMount(() => {
+      // Like players.push(player)
+      players.add(player)
+    })
+  </script>
+  
+  <div>
+      <audio
+          bind:this={player}
+          {src}
+          controls>
+          <track kind="captions" />
+      </audio>
+  </div>
+  ```
+Det sista jag gjorde var att lägga in koden nedan utanför script.
 
-**sick** dude
+Sen lade jag in en button class som gör att när musen åker över kommer en ny button över den gamla. 
+Jag tog koden från sveltes hemsida, från deras exempel.
+
+```js
+
+{#each audioTracks as src}
+  <AudioPlayer {src} />
+{/each}
+
+
+<button class="slide">Rose</button>
+.slide {
+		height: 4rem;
+		width: 8rem;
+		background-color: rgb(249, 245, 248);
+		border-color: #f2a5df;
+		color: #ebbfe5;
+		font-size: 1.25rem;
+		background-image: linear-gradient(45deg, #ef96c4 50%, transparent 50%);
+		background-position: 100%;
+		background-size: 400%;
+		transition: background 300ms ease-in-out;
+	}
+	.slide:hover {
+		background-position: 0;
+		color: rgb(162, 20, 122);
+	}
+```
 

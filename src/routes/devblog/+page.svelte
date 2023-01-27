@@ -4,7 +4,7 @@
 </script>
 
 <article>
-  <h1>Blog</h1>
+  <h1>Blog skriven av Alva</h1>
   
   <ul>
     {#each data.posts as post}
