@@ -1,56 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-8003c18b.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/2-c12348e4.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-38871556.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-1a61c524.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-339cea0c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-11e44e3b.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/devblog/_path_/_page.svelte-144528ca.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/devblog/_path_/_page.js-5c50a9d5.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-c08ce6b5.js"><!-- HEAD_svelte-1lc4dl3_START --><link rel="stylesheet" href="/pico.min.css"><style>nav {
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-  </style><!-- HEAD_svelte-1lc4dl3_END -->
-	</head>
-	<body>
-		<div style="display: contents">
-
-
-
-
-<nav><ul><li><a href="/">Hem</a></li>
-    <li><a href="/devblog">Blog</a></li></ul></nav>
-
-<main class="container-fluid"><hr>
-
-  <main class="container">
-
-
-<article><h1>Onsdag</h1>
-  <p>Published: 2022-01-25</p>
-  <h1>Vad jag gjorde i Onsdags</h1>
-<p>Det första jag gjorde var att lägga in musik till min blog, allltså en adio player. Koden tog jag från sveltes hemsida.
-Jag importerade en Adiuplayer och sedan tog jag en musik länk och lade in den i en lista.
-Se koden nedan.</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+import{S as I,i as N,s as Q,k as o,q as y,a as u,l as e,m as l,r as b,h as a,c as i,n as H,b as p,E as j,B as J}from"./index-1a61c524.js";function U(z){let t,A,v,d,S,w,r,K=`<code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
    <span class="token keyword">import</span> AudioPlayer<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> stopAll <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'./AudioPlayer.svelte'</span>
 
 <span class="token keyword">let</span> audioTracks <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token string">'https://sveltejs.github.io/assets/music/strauss.mp3'</span>
-<span class="token punctuation">]</span></code><!-- HTML_TAG_END --></pre>
-<p>Efter det skapade jag en ny Adioplayer fil som jag lade under routes.
-Se koden nedan jag lade in</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token operator">&lt;</span>script context<span class="token operator">=</span><span class="token string">"module"</span><span class="token operator">></span>
+<span class="token punctuation">]</span></code>`,_,m,T,E,c,V=`<code class="language-js"><span class="token operator">&lt;</span>script context<span class="token operator">=</span><span class="token string">"module"</span><span class="token operator">></span>
     <span class="token keyword">const</span> players <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   
     <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">stopAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -78,11 +31,7 @@ Se koden nedan jag lade in</p>
           controls<span class="token operator">></span>
           <span class="token operator">&lt;</span>track kind<span class="token operator">=</span><span class="token string">"captions"</span> <span class="token operator">/</span><span class="token operator">></span>
       <span class="token operator">&lt;</span><span class="token operator">/</span>audio<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code><!-- HTML_TAG_END --></pre>
-<p>Det sista jag gjorde var att lägga in koden nedan utanför script.</p>
-<p>Sen lade jag in en button class som gör att när musen åker över kommer en ny button över den gamla.
-Jag tog koden från sveltes hemsida, från deras exempel.</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js">
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code>`,h,f,M,x,g,D,P,k,B=`<code class="language-js">
 <span class="token punctuation">&#123;</span>#each audioTracks <span class="token keyword">as</span> src<span class="token punctuation">&#125;</span>
   <span class="token operator">&lt;</span>AudioPlayer <span class="token punctuation">&#123;</span>src<span class="token punctuation">&#125;</span> <span class="token operator">/</span><span class="token operator">></span>
 <span class="token punctuation">&#123;</span><span class="token operator">/</span>each<span class="token punctuation">&#125;</span>
@@ -104,24 +53,12 @@ Jag tog koden från sveltes hemsida, från deras exempel.</p>
 	<span class="token punctuation">.</span>slide<span class="token operator">:</span>hover <span class="token punctuation">&#123;</span>
 		background<span class="token operator">-</span>position<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
 		<span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">162</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">122</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></article></main></main>
-
-
-		<script type="module" data-sveltekit-hydrate="v28muw">
-			import { start } from "../_app/immutable/start-38871556.js";
-
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="v28muw"]').parentNode,
-				version: "1674816656770",
-				hydrate: {
-					node_ids: [0, 4],
-					data: [null,null],
-					form: null
-				}
-			});
-		</script>
-	</div>
-	</body>
-</html>
+	<span class="token punctuation">&#125;</span></code>`;return{c(){t=o("h1"),A=y("Vad jag gjorde i Onsdags"),v=u(),d=o("p"),S=y(`Det första jag gjorde var att lägga in musik till min blog, allltså en adio player. Koden tog jag från sveltes hemsida.
+Jag importerade en Adiuplayer och sedan tog jag en musik länk och lade in den i en lista.
+Se koden nedan.`),w=u(),r=o("pre"),_=u(),m=o("p"),T=y(`Efter det skapade jag en ny Adioplayer fil som jag lade under routes.
+Se koden nedan jag lade in`),E=u(),c=o("pre"),h=u(),f=o("p"),M=y("Det sista jag gjorde var att lägga in koden nedan utanför script."),x=u(),g=o("p"),D=y(`Sen lade jag in en button class som gör att när musen åker över kommer en ny button över den gamla.
+Jag tog koden från sveltes hemsida, från deras exempel.`),P=u(),k=o("pre"),this.h()},l(s){t=e(s,"H1",{});var n=l(t);A=b(n,"Vad jag gjorde i Onsdags"),n.forEach(a),v=i(s),d=e(s,"P",{});var L=l(d);S=b(L,`Det första jag gjorde var att lägga in musik till min blog, allltså en adio player. Koden tog jag från sveltes hemsida.
+Jag importerade en Adiuplayer och sedan tog jag en musik länk och lade in den i en lista.
+Se koden nedan.`),L.forEach(a),w=i(s),r=e(s,"PRE",{class:!0});var C=l(r);C.forEach(a),_=i(s),m=e(s,"P",{});var R=l(m);T=b(R,`Efter det skapade jag en ny Adioplayer fil som jag lade under routes.
+Se koden nedan jag lade in`),R.forEach(a),E=i(s),c=e(s,"PRE",{class:!0});var F=l(c);F.forEach(a),h=i(s),f=e(s,"P",{});var O=l(f);M=b(O,"Det sista jag gjorde var att lägga in koden nedan utanför script."),O.forEach(a),x=i(s),g=e(s,"P",{});var q=l(g);D=b(q,`Sen lade jag in en button class som gör att när musen åker över kommer en ny button över den gamla.
+Jag tog koden från sveltes hemsida, från deras exempel.`),q.forEach(a),P=i(s),k=e(s,"PRE",{class:!0});var G=l(k);G.forEach(a),this.h()},h(){H(r,"class","language-js"),H(c,"class","language-js"),H(k,"class","language-js")},m(s,n){p(s,t,n),j(t,A),p(s,v,n),p(s,d,n),j(d,S),p(s,w,n),p(s,r,n),r.innerHTML=K,p(s,_,n),p(s,m,n),j(m,T),p(s,E,n),p(s,c,n),c.innerHTML=V,p(s,h,n),p(s,f,n),j(f,M),p(s,x,n),p(s,g,n),j(g,D),p(s,P,n),p(s,k,n),k.innerHTML=B},p:J,i:J,o:J,d(s){s&&a(t),s&&a(v),s&&a(d),s&&a(w),s&&a(r),s&&a(_),s&&a(m),s&&a(E),s&&a(c),s&&a(h),s&&a(f),s&&a(x),s&&a(g),s&&a(P),s&&a(k)}}}const X={title:"Onsdag",date:"2022-01-25"};class Y extends I{constructor(t){super(),N(this,t,null,U,Q,{})}}export{Y as default,X as metadata};

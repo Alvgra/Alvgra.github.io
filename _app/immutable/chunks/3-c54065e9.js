@@ -1,54 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-8003c18b.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/2-c12348e4.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-38871556.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-1a61c524.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-339cea0c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-11e44e3b.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/devblog/_path_/_page.svelte-144528ca.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/devblog/_path_/_page.js-5c50a9d5.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-c08ce6b5.js"><!-- HEAD_svelte-1lc4dl3_START --><link rel="stylesheet" href="/pico.min.css"><style>nav {
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-  </style><!-- HEAD_svelte-1lc4dl3_END -->
-	</head>
-	<body>
-		<div style="display: contents">
-
-
-
-
-<nav><ul><li><a href="/">Hem</a></li>
-    <li><a href="/devblog">Blog</a></li></ul></nav>
-
-<main class="container-fluid"><hr>
-
-  <main class="container">
-
-
-<article><h1>Måndag</h1>
-  <p>Published: 2023-01-24</p>
-  <p>Idag började jag med att fortsätta med min idé at få blomblad som åker ner från skärmen då man klickar på blomman.
-Jag började med att skapa en div component som inkapsylerade hela article komponenten. Denna “ligger under” resten av komponenterna i filen page.svelte. Den här bakgrundsbilden skulle de fallande bladen visas på.
-jag började med att sätta bakgrundsbilden till ingenting
-(null), detta för att orginellt ska den vara samma som innan.
-Sen när man klickar på bloman/klickern så sätter du att bakgrundbilden som ska användas
-är en gif. Denna gif spelas i bakgrunden av resten på siden.
-Jag ville att gifen skulle försvinna då man inte längre klickar så därfor kallade jag en sleep funktion som väntade
-x antal millisekunder innan den kör ett givet komando. Mitt komando är att sätta
-tillbaka bakgrundsbilden till ingenting. </p>
-<p>Nedan syns sleep funktionen och min uppdaterade increment funktion.</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token comment">// sleep time expects milliseconds</span>
+import{S as X,i as Y,s as Z,k as e,q as _,a as r,l as o,m as l,r as j,h as a,c as u,n as $,b as t,E as y,L as nn,u as an,B as U}from"./index-1a61c524.js";function sn(w){let p,E,c,k,T,h,i,A=`<code class="language-js"><span class="token comment">// sleep time expects milliseconds</span>
 <span class="token keyword">function</span> <span class="token function">sleep</span> <span class="token punctuation">(</span><span class="token parameter">time</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> time<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
@@ -62,19 +12,14 @@ tillbaka bakgrundsbilden till ingenting. </p>
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
   
   <span class="token punctuation">&#125;</span>
-</code><!-- HTML_TAG_END --></pre>
-<p>Jag satte sedan in en progress bar. Progress value satte jag till clickar och maximala talet clickar till 100.
-Se koden nedan. Jag lade koden mellan article och header.</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token operator">&lt;</span>article<span class="token operator">></span>
+</code>`,x,f,C,P,m,F=`<code class="language-js"><span class="token operator">&lt;</span>article<span class="token operator">></span>
   <span class="token operator">&lt;</span>progress value<span class="token operator">=</span><span class="token punctuation">&#123;</span>clicks<span class="token punctuation">&#125;</span> max<span class="token operator">=</span><span class="token string">"100"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>progress<span class="token operator">></span>
   <span class="token operator">&lt;</span>header<span class="token operator">></span>
     <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"grid"</span><span class="token operator">></span>
       <span class="token punctuation">&#123;</span>#each upgrades <span class="token keyword">as</span> upgrade<span class="token punctuation">&#125;</span>
         <span class="token operator">&lt;</span>button
           <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"upgrade"</span>
-          <span class="token literal-property property">on</span><span class="token operator">:</span>click<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></code><!-- HTML_TAG_END --></pre>
-<p>Nedan syns koden för hur jag bytte färg på bordern</p>
-<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js">progress<span class="token punctuation">&#123;</span>
+          <span class="token literal-property property">on</span><span class="token operator">:</span>click<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></code>`,J,g,N,M,d,G=`<code class="language-js">progress<span class="token punctuation">&#123;</span>
   background<span class="token operator">-</span>color<span class="token operator">:</span><span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">224</span><span class="token punctuation">,</span> <span class="token number">191</span><span class="token punctuation">,</span> <span class="token number">218</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   scrollbar<span class="token operator">-</span>color<span class="token operator">:</span> black<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
@@ -91,26 +36,22 @@ progress<span class="token punctuation">[</span>value<span class="token punctuat
 
     border<span class="token operator">-</span>radius<span class="token operator">:</span> 2px<span class="token punctuation">;</span> 
     background<span class="token operator">-</span>size<span class="token operator">:</span> 35px 20px<span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h1>0</h1>
-<button>CLICK ME</button></article></main></main>
-
-
-		<script type="module" data-sveltekit-hydrate="6cq52q">
-			import { start } from "../_app/immutable/start-38871556.js";
-
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="6cq52q"]').parentNode,
-				version: "1674816656770",
-				hydrate: {
-					node_ids: [0, 4],
-					data: [null,null],
-					form: null
-				}
-			});
-		</script>
-	</div>
-	</body>
-</html>
+<span class="token punctuation">&#125;</span></code>`,D,v,L,S,b,H,I,R;return{c(){p=e("p"),E=_(`Idag började jag med att fortsätta med min idé at få blomblad som åker ner från skärmen då man klickar på blomman.
+Jag började med att skapa en div component som inkapsylerade hela article komponenten. Denna “ligger under” resten av komponenterna i filen page.svelte. Den här bakgrundsbilden skulle de fallande bladen visas på.
+jag började med att sätta bakgrundsbilden till ingenting
+(null), detta för att orginellt ska den vara samma som innan.
+Sen när man klickar på bloman/klickern så sätter du att bakgrundbilden som ska användas
+är en gif. Denna gif spelas i bakgrunden av resten på siden.
+Jag ville att gifen skulle försvinna då man inte längre klickar så därfor kallade jag en sleep funktion som väntade
+x antal millisekunder innan den kör ett givet komando. Mitt komando är att sätta
+tillbaka bakgrundsbilden till ingenting.`),c=r(),k=e("p"),T=_("Nedan syns sleep funktionen och min uppdaterade increment funktion."),h=r(),i=e("pre"),x=r(),f=e("p"),C=_(`Jag satte sedan in en progress bar. Progress value satte jag till clickar och maximala talet clickar till 100.
+Se koden nedan. Jag lade koden mellan article och header.`),P=r(),m=e("pre"),J=r(),g=e("p"),N=_("Nedan syns koden för hur jag bytte färg på bordern"),M=r(),d=e("pre"),D=r(),v=e("h1"),L=_(w[0]),S=r(),b=e("button"),H=_("CLICK ME"),this.h()},l(n){p=o(n,"P",{});var s=l(p);E=j(s,`Idag började jag med att fortsätta med min idé at få blomblad som åker ner från skärmen då man klickar på blomman.
+Jag började med att skapa en div component som inkapsylerade hela article komponenten. Denna “ligger under” resten av komponenterna i filen page.svelte. Den här bakgrundsbilden skulle de fallande bladen visas på.
+jag började med att sätta bakgrundsbilden till ingenting
+(null), detta för att orginellt ska den vara samma som innan.
+Sen när man klickar på bloman/klickern så sätter du att bakgrundbilden som ska användas
+är en gif. Denna gif spelas i bakgrunden av resten på siden.
+Jag ville att gifen skulle försvinna då man inte längre klickar så därfor kallade jag en sleep funktion som väntade
+x antal millisekunder innan den kör ett givet komando. Mitt komando är att sätta
+tillbaka bakgrundsbilden till ingenting.`),s.forEach(a),c=u(n),k=o(n,"P",{});var q=l(k);T=j(q,"Nedan syns sleep funktionen och min uppdaterade increment funktion."),q.forEach(a),h=u(n),i=o(n,"PRE",{class:!0});var Q=l(i);Q.forEach(a),x=u(n),f=o(n,"P",{});var B=l(f);C=j(B,`Jag satte sedan in en progress bar. Progress value satte jag till clickar och maximala talet clickar till 100.
+Se koden nedan. Jag lade koden mellan article och header.`),B.forEach(a),P=u(n),m=o(n,"PRE",{class:!0});var V=l(m);V.forEach(a),J=u(n),g=o(n,"P",{});var K=l(g);N=j(K,"Nedan syns koden för hur jag bytte färg på bordern"),K.forEach(a),M=u(n),d=o(n,"PRE",{class:!0});var W=l(d);W.forEach(a),D=u(n),v=o(n,"H1",{});var z=l(v);L=j(z,w[0]),z.forEach(a),S=u(n),b=o(n,"BUTTON",{});var O=l(b);H=j(O,"CLICK ME"),O.forEach(a),this.h()},h(){$(i,"class","language-js"),$(m,"class","language-js"),$(d,"class","language-js")},m(n,s){t(n,p,s),y(p,E),t(n,c,s),t(n,k,s),y(k,T),t(n,h,s),t(n,i,s),i.innerHTML=A,t(n,x,s),t(n,f,s),y(f,C),t(n,P,s),t(n,m,s),m.innerHTML=F,t(n,J,s),t(n,g,s),y(g,N),t(n,M,s),t(n,d,s),d.innerHTML=G,t(n,D,s),t(n,v,s),y(v,L),t(n,S,s),t(n,b,s),y(b,H),I||(R=nn(b,"click",w[1]),I=!0)},p(n,[s]){s&1&&an(L,n[0])},i:U,o:U,d(n){n&&a(p),n&&a(c),n&&a(k),n&&a(h),n&&a(i),n&&a(x),n&&a(f),n&&a(P),n&&a(m),n&&a(J),n&&a(g),n&&a(M),n&&a(d),n&&a(D),n&&a(v),n&&a(S),n&&a(b),I=!1,R()}}}const en={title:"Måndag",date:"2023-01-24"};function tn(w,p,E){let c=0;return[c,()=>{E(0,c=c+1)}]}class on extends X{constructor(p){super(),Y(this,p,tn,sn,Z,{})}}export{on as default,en as metadata};

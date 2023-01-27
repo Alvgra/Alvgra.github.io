@@ -1,57 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-8003c18b.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/2-c12348e4.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-38871556.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-1a61c524.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-339cea0c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-11e44e3b.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/devblog/_path_/_page.svelte-144528ca.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/devblog/_path_/_page.js-5c50a9d5.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-c08ce6b5.js"><!-- HEAD_svelte-1lc4dl3_START --><link rel="stylesheet" href="/pico.min.css"><style>nav {
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-  </style><!-- HEAD_svelte-1lc4dl3_END -->
-	</head>
-	<body>
-		<div style="display: contents">
-
-
-
-
-<nav><ul><li><a href="/">Hem</a></li>
-    <li><a href="/devblog">Blog</a></li></ul></nav>
-
-<main class="container-fluid"><hr>
-
-  <main class="container">
-
-
-<article><h1>Fredag</h1>
-  <p>Published: 2023-01-20</p>
-  <p>Idag började jag med att sätta in en border runt min bild i min game class. Bordern fick färgen brun från början
-men snart insåg att brun inte passade mitt tema så bytte jag färgen till rosa genom att ändra background-color.</p>
-<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token punctuation">.</span>game <span class="token punctuation">&#123;</span>
+import{S as O,i as Q,s as X,k as l,q as y,a as m,l as c,m as i,r as j,h as n,c as g,n as M,b as t,E,B as R}from"./index-1a61c524.js";function A(q){let e,w,f,p,z=`<code class="language-ts"><span class="token punctuation">.</span>game <span class="token punctuation">&#123;</span>
     height<span class="token operator">:</span> 50vh<span class="token punctuation">;</span>
     display<span class="token operator">:</span> flex<span class="token punctuation">;</span>
     flex<span class="token operator">-</span>direction<span class="token operator">:</span> column<span class="token punctuation">;</span>
     place<span class="token operator">-</span>items<span class="token operator">:</span> center<span class="token punctuation">;</span>
     place<span class="token operator">-</span>content<span class="token operator">:</span> center<span class="token punctuation">;</span>
     background<span class="token operator">-</span>color<span class="token operator">:</span> #f9e4f1<span class="token punctuation">;</span>
-    border<span class="token operator">-</span>radius<span class="token operator">:</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<p>Efter det fixade jag färgtemat på mina workers så att det fick en rosa bakgrund med
-en mörkrosa border färg. Jag ändrade det genom att byta background-color och
-border.</p>
-<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"> <span class="token punctuation">.</span>worker <span class="token punctuation">&#123;</span>
+    border<span class="token operator">-</span>radius<span class="token operator">:</span> <span class="token number">0</span><span class="token operator">%</span> <span class="token number">0</span><span class="token operator">%</span><span class="token punctuation">;</span></code>`,b,k,J,_,o,H=`<code class="language-ts"> <span class="token punctuation">.</span>worker <span class="token punctuation">&#123;</span>
     width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
     height<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
     border<span class="token operator">:</span> 1px solid <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">167</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">96</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -59,10 +13,7 @@ border.</p>
     place<span class="token operator">-</span>items<span class="token operator">:</span> center<span class="token punctuation">;</span>
     place<span class="token operator">-</span>content<span class="token operator">:</span> center<span class="token punctuation">;</span>
     display<span class="token operator">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>Sen fixade jag min ros bild så att den blev centrerad och förminskad i cliker cirkeln.
-Jag fixade det genom att ändra background-size från cover till 60% 104% oxh background position till center.</p>
-<pre class="language-ts"><!-- HTML_TAG_START --><code class="language-ts"><span class="token punctuation">.</span>clicker <span class="token punctuation">&#123;</span>
+  <span class="token punctuation">&#125;</span></code>`,v,u,P,h,r,L=`<code class="language-ts"><span class="token punctuation">.</span>clicker <span class="token punctuation">&#123;</span>
     clip<span class="token operator">-</span>path<span class="token operator">:</span> <span class="token function">circle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     display<span class="token operator">:</span> flex<span class="token punctuation">;</span>
     height<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
@@ -74,29 +25,20 @@ Jag fixade det genom att ändra background-size från cover till 60% 104% oxh ba
     background<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">60</span><span class="token operator">%</span> <span class="token number">104</span><span class="token operator">%</span><span class="token punctuation">;</span>
     background<span class="token operator">-</span>position<span class="token operator">:</span> center<span class="token punctuation">;</span>
     
-  <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>Jag bytte även bild som ligger i min uppgrade class i background-image till en png som glittrar.
+  <span class="token punctuation">&#125;</span></code>`,x,d,I;return{c(){e=l("p"),w=y(`Idag började jag med att sätta in en border runt min bild i min game class. Bordern fick färgen brun från början
+men snart insåg att brun inte passade mitt tema så bytte jag färgen till rosa genom att ändra background-color.`),f=m(),p=l("pre"),b=m(),k=l("p"),J=y(`Efter det fixade jag färgtemat på mina workers så att det fick en rosa bakgrund med
+en mörkrosa border färg. Jag ändrade det genom att byta background-color och
+border.`),_=m(),o=l("pre"),v=m(),u=l("p"),P=y(`Sen fixade jag min ros bild så att den blev centrerad och förminskad i cliker cirkeln.
+Jag fixade det genom att ändra background-size från cover till 60% 104% oxh background position till center.`),h=m(),r=l("pre"),x=m(),d=l("p"),I=y(`Jag bytte även bild som ligger i min uppgrade class i background-image till en png som glittrar.
 Efter det kom jag på iden att sätta in en png gif som kom in på skärmen vid klickning
 på blomman. Då kommer det ner blomblad från skärmen. Jag han inte klart med det på dagens lektion
 så jag fortsätter på nästa lektion.
-Jag fortsatte med att skriva på min andra blog.</p></article></main></main>
-
-
-		<script type="module" data-sveltekit-hydrate="bynz4r">
-			import { start } from "../_app/immutable/start-38871556.js";
-
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="bynz4r"]').parentNode,
-				version: "1674816656770",
-				hydrate: {
-					node_ids: [0, 4],
-					data: [null,null],
-					form: null
-				}
-			});
-		</script>
-	</div>
-	</body>
-</html>
+Jag fortsatte med att skriva på min andra blog.`),this.h()},l(a){e=c(a,"P",{});var s=i(e);w=j(s,`Idag började jag med att sätta in en border runt min bild i min game class. Bordern fick färgen brun från början
+men snart insåg att brun inte passade mitt tema så bytte jag färgen till rosa genom att ändra background-color.`),s.forEach(n),f=g(a),p=c(a,"PRE",{class:!0});var C=i(p);C.forEach(n),b=g(a),k=c(a,"P",{});var S=i(k);J=j(S,`Efter det fixade jag färgtemat på mina workers så att det fick en rosa bakgrund med
+en mörkrosa border färg. Jag ändrade det genom att byta background-color och
+border.`),S.forEach(n),_=g(a),o=c(a,"PRE",{class:!0});var D=i(o);D.forEach(n),v=g(a),u=c(a,"P",{});var B=i(u);P=j(B,`Sen fixade jag min ros bild så att den blev centrerad och förminskad i cliker cirkeln.
+Jag fixade det genom att ändra background-size från cover till 60% 104% oxh background position till center.`),B.forEach(n),h=g(a),r=c(a,"PRE",{class:!0});var F=i(r);F.forEach(n),x=g(a),d=c(a,"P",{});var T=i(d);I=j(T,`Jag bytte även bild som ligger i min uppgrade class i background-image till en png som glittrar.
+Efter det kom jag på iden att sätta in en png gif som kom in på skärmen vid klickning
+på blomman. Då kommer det ner blomblad från skärmen. Jag han inte klart med det på dagens lektion
+så jag fortsätter på nästa lektion.
+Jag fortsatte med att skriva på min andra blog.`),T.forEach(n),this.h()},h(){M(p,"class","language-ts"),M(o,"class","language-ts"),M(r,"class","language-ts")},m(a,s){t(a,e,s),E(e,w),t(a,f,s),t(a,p,s),p.innerHTML=z,t(a,b,s),t(a,k,s),E(k,J),t(a,_,s),t(a,o,s),o.innerHTML=H,t(a,v,s),t(a,u,s),E(u,P),t(a,h,s),t(a,r,s),r.innerHTML=L,t(a,x,s),t(a,d,s),E(d,I)},p:R,i:R,o:R,d(a){a&&n(e),a&&n(f),a&&n(p),a&&n(b),a&&n(k),a&&n(_),a&&n(o),a&&n(v),a&&n(u),a&&n(h),a&&n(r),a&&n(x),a&&n(d)}}}const K={title:"Fredag",date:"2023-01-20",count:25,color:"cadetblue",list:[1,2,3,4,"boo"]};class N extends O{constructor(e){super(),Q(this,e,null,A,X,{})}}export{N as default,K as metadata};
