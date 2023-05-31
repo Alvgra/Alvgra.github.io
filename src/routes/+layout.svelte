@@ -1,5 +1,7 @@
 <script>
   import "prism-themes/themes/prism-one-dark.css";
+  import "../input.css";
+
 
 </script>
 
@@ -11,20 +13,23 @@
       margin-left: 10%;
       margin-right: 10%;
     }
+    
   </style>
 </svelte:head>
 
 <nav>
   <ul>
-    <li><a href="/">Hem</a></li>
-    <li><a href="/devblog">Blog</a></li>
+    <li><a href="/Umea-vastra">Hem</a></li>
+    <li><a href="/Truppen">Truppen</a></li>
+    <li><a href=/Medlem>Medlem</a></li>
+    <li><a href=/Historia>Historia</a></li>
+    <li><a href=/Vora-lag>Våra lag</a></li>
+   
   </ul>
 </nav>
 
 <main class="container-fluid">
   <hr />
 
-  <main class="container">
     <slot />
-  </main>
 </main>

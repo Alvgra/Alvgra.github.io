@@ -1,0 +1,25 @@
+---
+title: Onsdag  
+date: "2023-01-18"
+---
+
+<script>        
+ let a = 0;
+</script>
+
+**Vad jag gjorde under Onsdagen**
+
+Idag har jag börjat med att installera programmet. 
+Jag laddade ned och installerade Node (LTS) och skapade sedan en GitHub konto.
+Efter att jag bekantat mig och läst igenom uppgiftens instruktioner var det första jag
+gjorde att byta ut de befintliga bilderna till glittrande gif bilder.
+Jag har helt enkelt testat mig fram för att se vad man kan göra och försökt komma på lite nya ideer.
+Jag bytte bilderna genom att ta länken från gif bilderna och bytte ut dom länkarna 
+med dom gamla.
+
+**Klicka lite extra nedan**
+
+
+<h1>{a}</h1>
+
+<button on:click={()=>{a = a + 1}}>CLICK ME</button>
