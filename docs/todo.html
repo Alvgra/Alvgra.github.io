@@ -7,7 +7,7 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout-5c045b07.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/input-f2f9fc1d.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page-91a5edc0.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-c8295125.css" rel="stylesheet">
 		<link rel="modulepreload" href="./_app/immutable/start-07a3558b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-7bdb04d4.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-b05865fd.js">
@@ -15,7 +15,7 @@
 		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-159258e5.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-5d096bfe.js"><!-- HEAD_svelte-yp6h03_START --><link rel="stylesheet" href="/pico.min.css"><style>nav {
+		<link rel="modulepreload" href="./_app/immutable/components/pages/todo/_page.svelte-cdd94848.js"><!-- HEAD_svelte-yp6h03_START --><link rel="stylesheet" href="/pico.min.css"><style>nav {
       margin-left: 10%;
       margin-right: 10%;
     }
@@ -36,38 +36,58 @@
 
 <main class="container-fluid"><hr>
 
-    <div style="background-image:null; background-size:cover"><h1 class="top svelte-lmbgek">Click the flower</h1>
+    <p class="svelte-1xc69xd">Todo list:</p>
 
-<button class="slide svelte-lmbgek">Rose</button>
-
-<div><audio src="https://sveltejs.github.io/assets/music/strauss.mp3" controls><track kind="captions"></audio></div>
+<header class="sträcket_color svelte-1xc69xd">____________________________________________________________________________________________________________________</header>
 
 
-<article><progress value="0" max="100" class="svelte-lmbgek"></progress>
-  <header><div class="grid"><button class="upgrade svelte-lmbgek"><span>Booster</span>
-          <span>5</span>
-        </button><button class="upgrade svelte-lmbgek"><span>Flower worker</span>
-          <span>2</span>
-        </button></div></header>
-  <div class="game svelte-lmbgek"><button class="clicker svelte-lmbgek"><span class="clicks svelte-lmbgek">0</span>
-      <span class="pointtext svelte-lmbgek">PPC: 1</span></button></div>
-  <footer><div class="panelright svelte-lmbgek"><div><span>Workers</span>
-        <hr>
-        <div class="shop svelte-lmbgek"></div></div>
-      <hr></div></footer></article>
-</div></main>
+
+<input type="text" placeholder="Lägg til en ny todo..." value="">
+<button class="knapp_text svelte-1xc69xd">Lägg till</button>
+
+<br>
+ 
+
+<h1 class="order_color svelte-1xc69xd">Do you want to order icecream?</h1>
+<h7 class="some_here_color svelte-1xc69xd">Order some here:</h7>
+<h2 class="Size svelte-1xc69xd">Size</h2>
+
+<label><input type="radio" value="1" checked>
+	One scoop
+</label>
+
+<label><input type="radio" value="2">
+	Two scoops
+</label>
+
+<label><input type="radio" value="3">
+	Three scoops
+</label>
+
+<h2 class="Flavours svelte-1xc69xd">Flavours</h2>
+
+<label><input type="checkbox" value="Cookies and cream">
+		Cookies and cream
+	</label><label><input type="checkbox" value="Mint choc chip" checked>
+		Mint choc chip
+	</label><label><input type="checkbox" value="Raspberry ripple">
+		Raspberry ripple
+	</label>
+
+<p class="svelte-1xc69xd">You ordered 1 scoop
+		of Mint choc chip</p></main>
 
 
-		<script type="module" data-sveltekit-hydrate="3mu5kt">
+		<script type="module" data-sveltekit-hydrate="1qkul70">
 			import { start } from "./_app/immutable/start-07a3558b.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="3mu5kt"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="1qkul70"]').parentNode,
 				version: "1685529136157",
 				hydrate: {
-					node_ids: [0, 2],
+					node_ids: [0, 7],
 					data: [null,null],
 					form: null
 				}
